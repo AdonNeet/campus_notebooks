@@ -36,15 +36,13 @@
 - Berbagai kejadian dapat menyebabkanperubahan/perpindahan state proses
 - Terbagi menjadi dua bagian state dasar (3 bagian) dan stat lanjut (5 bagian)
 
-<div align="center">
-
 | Status | Deskripsi |
 | :------ | :------- |
 | Running | Pemroses sedang mengeksekusi i istruksi proses tsb |
 | Ready | Proses siap dieksekusi tapi pemrose tidak mengeksekusi proses ini |
 | Blocked | Proses menunggu kejadian tertentu selesai <br> Misal : <br> > Selesainya operasi I/O <br> > Tersedianya memory, dll |
 
-</div>
+<br>
 
 ```mermaid
 	flowchart LR; 
@@ -56,6 +54,7 @@
 		terminated ~~~ E
 
 ```
+<br>
 
 - Terdapat transisi di antara state-state selama siklus proses, yaitu:
 - Proses yang baru diciptakan akan segea mempunyai state <b>Ready</b>
