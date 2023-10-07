@@ -1,3 +1,7 @@
+</style>
+<link rel="stylesheet" href="/assets/styles/default.css" type="css">
+<style>
+
 # Manajemen Proses
 
 ## Proses
