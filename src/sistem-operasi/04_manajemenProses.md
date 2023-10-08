@@ -4,7 +4,7 @@
 - Program yang sedang di ekesekusi
 - Proses merupakan unti kerja terkecil yang secara individu memiliki sumber daya dan merupakan unit terkecil yang dijadwal sitstem operasi
 - Beberapa istilah penting berkaitan dengan proses:
-	> - Multiprogramming (multitasknig)
+	> - Multiprogramming (multitasking)
 	> - Multiprocessing
 	> - Distributed processing
 
@@ -13,13 +13,13 @@
 - Pada multiprogramming pemakai memandang terdapat banyak proses dijalankan bersamaan pada satu saat
 - Proses yang dijalankan pada sistem multiprogramming bersifat: 
 	> - Saling tidak bergantung
-		-> Artinya proses tidak saling mempengaruhi satu sama lain
+	>   -> Artinya proses tidak saling mempengaruhi satu sama lain
 	> - Proses dihalankan bersamaan pada satu saat
-- Dalam multiprogramming sistem melakukan interfeave (salingg mealanjutkan)
+- Dalam multiprogramming sistem melakukan interleave (saling mealanjutkan)
 - Sehingga seolah-olah proses beroperasi secara bersamaan
 - Pemroses mengeksekusi satu proses tiap saat dan secara cepat beralih ke proses lain secara bergiliran
 - Karena dilakukan dengan sangat cepat sehingga menimbulkan efek pseudoparallelism pada pemakai
-- Pseudoparallelism, adalah konsep
+- <b> Pseudoparallelism </b>, adalah konsep eksekusi prose yang dilakukan seolah-olah berjalan secara paralel. (Ex: Win 98/NT/XP, OS/2, MAC System 7)
 
 ### Multiprocessing
 - Manajemen banyak proses pada komputer multiprocessor (banyak pemroses)
@@ -28,8 +28,16 @@
 - Ex: Windows NT, UNIX, Linux
 
 ### Distributed Processing
-- Manajemen banyak proses yang dieksekusi pada banyak sistem komputer yang tersebar pada jaringan
-- ..... *belum selesai
+- Manajemen banyak proses yang dieksekusi pada banyak sistem komputer yang tersebar di satu jaringan
+- Kecenderungan masa mendatang ada;ah menuju komputas tersebar. (Ex: AMOEBA, MACH)
+
+## Kebutuhan Utama Pengendalian Proses
+- Menurut Stalling kebutuhan utama pengendalian proses dapat mengacu ke proses.
+> - <b> Interleave (saling berkelanjutan) </b>
+>   -> Sistem operasi melakukan interleafe eksekusi proses untuk memaksimalkan penggunaan pemroses sambil memberi waktu tanggap yang memadahi.
+> - <b> Mengikuti Kebijakan Tertentu </b>
+>   -> Memperhatikan proses dengan prioritas tertinggi sambil menghindari deadlock
+> - <b> Mendukung Komunikasi antarproses dan Penciptaan Proses </b>
 
 ## State Proses
 - Proses melewati serangkaian state
@@ -51,10 +59,10 @@
 		B --> |Dispatch\nPengiriman| C --> |Timeout| B
 		C --> |Event Wait| D(Blocked)  --> |Occurs| B
 		C(Running) --> |Completion\nPenyelesaian| E(( ))
-		terminated ~~~ E
+		E ~~~ terminated
 
 ```
-<br>
+[]()<br>
 
 - Terdapat transisi di antara state-state selama siklus proses, yaitu:
 - Proses yang baru diciptakan akan segea mempunyai state <b>Ready</b>
@@ -63,4 +71,5 @@
 ## Process Control Block (PCB)
 - Berfungsi untuk menyimpa informasi mengenai proses.
 - Informasi di PCB dikelompokkan menjadi tiga kelompok, yaitu: 
-	> 1. Informasi identifikasi proses <br> -> Berkaitan dengan identifikasi proses yang unik, iden .... *belum selesai banyak
+	> 1. Informasi identifikasi proses  
+	>    -> Berkaitan dengan identifikasi proses yang unik, iden .... *belum selesai banyak
