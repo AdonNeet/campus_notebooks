@@ -31,6 +31,11 @@ Metode analitik: faktorkan menjadi $(x-4)(x-2)=0$
 
 Contoh: carilah sebuah akar $f(x)=x^2-6x+8=0$
 Metode numerik: diketahui sebuah akar terletak di dalam selang [3, 6] -> mengapa?
-![gambar1.1](/assets/img/metode-numerik/gambar1.1.png)
+![gambar1.1](mn1.1.png)
 Pendekatan sederhana mencari akar adalah secara iteratif dengan **metode titik tengah** (bisection):
+1. bagi selang[a,b] menjadi dua dengan titik tengah $c=(a+b)/2$
+2. ada dua sub-selang: [a,c] dan [c,b]. Pilih selang iterasi yang baru dengan syarat nilai fungsi di ujung selang berbeda tanda.
+3. ulangi langkah 1 dan 2 sampai ukuran selang $<\epsilon$ (epsilon adalah nilai yang sangat kecil yang menyatakan toleransi kesalahan akar yang diinginkan, misalnya $\epsilon=0.001, 00001, dsb$)
+![gambar1.2 height=500px](/assets/img/metode-numerik/mn1.2.png)
+
 \*belum selesai :|
