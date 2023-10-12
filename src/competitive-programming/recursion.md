@@ -1,9 +1,26 @@
-# Introduce
+# Table of Content
+
+- [Introduction](#introduction)
+	- [Entry Analogy](#entryAnalogy)
+	- [Basic Syntax](#basicSyntax)
+	- [Is it worth?](#isWorth)
+	- [When to use it?](#whenUse)
+
+
+
+# Introduction <a name="introduction"></a>
 Secara umum, rekursi merupakan suatu fungsi atau prosedur yang memanggil dirinya sendiri sebagai bagian dari eksekusinya sendiri. Ini sering digunakan untuk menyelesaikan suatu masalah yang dimana masalah tersebut dapat dipecahkan dengan pendekatan pemecahan berulang.
 
 Singkatnya, rekursi merupakan suatu metode dimana sebuah fungsi atau prosedur memanggil dirinya sendiri secara berulang-ulang untuk melakukan pendekatan pemecahan berulang dengan suatu kondisi tertentu pada suatu saat.
 
-# Entry Analogy
+Pada dasarnya, ada dua elemen utama dalam rekursi:
+1. Basis Rekursi (Base Case)
+	> Ini adalah kondisi atau situasi yang menghentikan pemanggilan diri sendiri. Tanpa basis rekursi yang benar, rekursi akan berlanjut tanpa henti dan akhirnya menyebabkan error atau kegagalan program.
+    
+2. Langkah Rekursi (Recursive Step)
+	> Ini adalah bagian dari fungsi atau prosedur yang memanggil dirinya sendiri. Pemanggilan rekursif ini harus mengarah pada perubahan yang terjadi pada masalah sehingga menuju basis rekursi. Dengan kata lain, masalah harus semakin kecil setiap kali fungsi dipanggil kembali.
+
+## Entry Analogy <a name="entryAnalogy"></a>
 Untuk memahami rekursi kita dapat menggunakan analogi nomor urut posisi.
 
 Suatu ketika kamu mengantri pada suatu antrian panjang, namun dirimu tidak mengetahui nomor urutan posisimu saat ini. Maka dari itu kamu bertanya kepada orang yang berada di depanmu.
@@ -33,7 +50,7 @@ flowchart LR
 ```
 <br>
 
-# Basic Syntax
+## Basic Syntax <a name="basicSyntax"></a>
 ```pseudocode
 // Pseudocode
 function rekursi(parameter):
@@ -46,14 +63,13 @@ function rekursi(parameter):
 
 // Contoh penggunaan rekursi
 ans = rekursi(nilai_parameter)
-
 ```
 Note: banyak jenis sintaks dasar pada rekursi, namun secara umum pasti akan terdapat bagian sebagai basis rekursi dan langkah rekursi untuk memanggil dirinya sendiri. 
 
 <br>
 
-# Is it worth?
-Itu tergantung pada situasi dan kondisi yang sedang kamu hadapi. Namun ketika sedang menggunakannya terdapat kelebihan dan kekurangannya.
+## Is it worth? <a name="isWroth"></a>
+Itu tergantung pada situasi dan kondisi pasa masalah yang sedang kamu hadapi. Namun ketika sedang menggunakannya terdapat kelebihan dan kekurangannya.
 
 <center>
 <table>
@@ -80,7 +96,7 @@ Itu tergantung pada situasi dan kondisi yang sedang kamu hadapi. Namun ketika se
 </table>
 </center>
 
-# When To Use It?
+## When To Use It? <a name="whenUse"></a>
 Ada beberapa kondisi atau kriteria untuk mengimplementasikan rekursi secara tepat, yaitu
 1. Masalah dapat dipecahkan menjadi masalah yang lebih kecil dengan struktur serupa
 	> Rekursi efektif digunakan ketika masalah yang sedang dihadapi dapat dibagi menjadi beberapa kasus yang serupa dengan masalah utama. Pemecahan masalah tersebut kemudian dapat diteruskan ke fungsi rekursif yang sama.
@@ -104,3 +120,59 @@ Ada beberapa kondisi atau kriteria untuk mengimplementasikan rekursi secara tepa
 	> Beberapa algoritma seperti pencarian dalam struktur data berulang seperti pohon atau graf lebih mudah diimplementasikan secara rekursif.
 	
 Perlu diingat bahwa harus hati-hati dalam penggunaan rekursi, karena rekursi dapat menjadi sulit untuk di-debug dan dapat menyebabkan masalah jika tidak dikelola dengan benar. Selalu pastikan bahwa basis rekursi tercapai dan rekursi berhenti pada suatu titik untuk mencegah masalah "stack overflow" dan kinerja yang buruk.
+
+# Call-Stack
+Call stack (tumpukan panggilan) adalah salah satu konsep penting dalam pemrograman komputer, terutama dalam pemrograman berbasis fungsi atau pemrograman prosedural. Call-Stack merupakan struktur data yang digunakan untuk melacak eksekusi fungsi atau metode dalam sebuah program. Call stack mengikuti urutan panggilan fungsi dan mengatur bagaimana fungsi-fungsi tersebut saling memanggil dan kembali.
+
+Call stack bekerja dengan cara berikut:
+
+1. Ketika program dimulai, satu fungsi utama (biasanya disebut "main" atau "entry point") dimasukkan ke dalam call stack.
+
+2. Ketika fungsi lain dipanggil dari fungsi utama, fungsi tersebut ditambahkan ke atas call stack.
+
+3. Call stack selalu memegang informasi tentang fungsi yang sedang aktif (yang berada di puncak tumpukan). Fungsi ini adalah fungsi yang saat ini sedang dieksekusi.
+
+4. Ketika fungsi selesai dieksekusi, ia dihapus dari call stack, dan eksekusi kembali ke fungsi yang memanggilnya (fungsi pemanggil).
+
+5. Proses ini berlanjut hingga semua fungsi yang telah dipanggil selesai dieksekusi, dan call stack kembali kosong.
+
+Call stack sangat penting untuk menghindari kesalahan eksekusi dan mengelola pemanggilan fungsi yang bersarang (nested function calls). Ketika call stack menjadi terlalu dalam (biasa disebut "stack overflow"), itu dapat mengakibatkan kesalahan dan penghentian program.
+
+Selain itu, call stack juga digunakan dalam bahasa pemrograman yang mendukung rekursi, di mana sebuah fungsi memanggil dirinya sendiri. Call stack melacak semua panggilan rekursif sehingga program tahu kapan harus kembali dari panggilan rekursif dan melanjutkan eksekusi.
+
+## Magician Analogy
+Untuk memahami call stack kita bisa membayangkan call stack sebagai cerita sederhana tentang seorang pesulap yang mengadakan pertunjukan sulap di panggung. Pesulap ini adalah fungsi utama dalam cerita kita, dan panggung adalah call stack.
+
+Ceritanya dimulai dengan pesulap berdiri sendirian di atas panggung (call stack kosong) dan dia memiliki seutas tali yang panjang. Setiap kali pesulap melakukan trik sulap, dia menambahkan tali ke dalam tumpukan tali di tangannya.
+
+1. Trik Pertama:
+   - Pesulap memasukkan satu ujung tali ke dalam tumpukan (call stack).
+   - Dia melakukan trik sulap pertamanya (memasukkan tali dengan panjang kelipatan dua dari sebuah angka, dimulai dari 1).
+   - Ketika trik selesai, pesulap mengeluarkan ujung tali dari tumpukan (call stack kosong lagi).
+```mermaid
+flowchart LR
+	X((Start)) --- Magician -- put 1 --> Stack -- pick 1 --> Magician  -- show empty stack --> Y((Output))
+```
+
+2. Trik Kedua:
+   - Pesulap memasukkan satu ujung tali lagi ke dalam tumpukan (call stack).
+   - Dia melakukan trik sulap kedua (mengalikan dua angka pada panjang sebelumnya di percobaan keduanya).
+   - Setelah itu, dia mengeluarkan ujung tali dari tumpukan lagi.
+```mermaid
+flowchart LR
+	X((Start)) --- Magician -- put 1 --> Stack -- pick 1 --> Magician -- put 2 --> Stack -- pick 2 --> Magician  -- show empty stack --> Y((Output))
+```
+
+3. Trik Ketiga:
+   - Kali ini, pesulap memutuskan untuk melakukan trik yang lebih rumit. Dia memasukkan ujung tali lagi ke dalam tumpukan.
+   - Dalam trik ini, pesulap memanggil dirinya sendiri untuk melakukan trik sulap (rekursi). Setiap kali dia memanggil dirinya sendiri, dia menambahkan tali yang lebih panjang ke tumpukan.
+   - Ketika trik ini akhirnya selesai, pesulap mengeluarkan tali-tali satu per satu sampai tumpukan kosong lagi.
+
+```mermaid
+flowchart LR
+	X((Start)) --- Magician -- put 1 --> Stack -- pick 1 --> Magician -- put 2 --> Stack -- pick 2 --> Magician -- put 4 --> Stack -- pick 4 --> Magician -- show empty stack --> Y((Output))
+```
+
+Selama pertunjukan, penyihir terus menambahkan tali ke dalam tumpukan (call stack) setiap kali dia memulai trik sulap, dan dia mengeluarkan tali dari tumpukan ketika trik selesai. Setiap kali tumpukan tali terlalu panjang, penyihir harus mengeluarkan tali-tali tersebut sebelum bisa melanjutkan pertunjukan.
+
+Dalam analogi ini, panggung (call stack) selalu memiliki tumpukan tali (fungsi yang aktif), dan penyihir (program) bermain-main dengan tali-tali ini saat dia melakukan trik sulap (eksekusi kode). Ini adalah cara yang sederhana untuk memahami bagaimana call stack bekerja dalam pemrograman.

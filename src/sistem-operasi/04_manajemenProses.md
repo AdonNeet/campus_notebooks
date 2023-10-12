@@ -62,7 +62,7 @@
 		E ~~~ terminated
 
 ```
-[]()<br>
+<br>
 
 - Terdapat transisi di antara state-state selama siklus proses, yaitu:
 - Proses yang baru diciptakan akan segea mempunyai state <b>Ready</b>
