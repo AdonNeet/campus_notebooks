@@ -1,16 +1,16 @@
 # Table of Content
 
-- {{[Introduction](#introduction)}}
-	- [Entry Analogy](#entryAnalogy)
-	- [Basic Syntax](#basicSyntax)
-	- [Is it worth?](#isWorth)
-	- [When to use it?](#whenUse)
-- [Call Stack](#callStack)
-	- [Magician Analogy](#magicAnalogy)
+- [Introduction](#introduction-)
+	- [Entry Analogy](#entry-analogy-)
+	- [Basic Syntax](#basic-syntax-)
+	- [Is it worth?](#is-it-worth-)
+	- [When to use it?](#when-to-use-it-)
+- [Call Stack](#call-stack-)
+	- [Magician Analogy](#magician-analogy-)
 
 
 
-# Introduction <a id="introduction"></a>
+# Introduction 
 Secara umum, rekursi merupakan suatu fungsi atau prosedur yang memanggil dirinya sendiri sebagai bagian dari eksekusinya sendiri. Ini sering digunakan untuk menyelesaikan suatu masalah yang dimana masalah tersebut dapat dipecahkan dengan pendekatan pemecahan berulang.
 
 Singkatnya, rekursi merupakan suatu metode dimana sebuah fungsi atau prosedur memanggil dirinya sendiri secara berulang-ulang untuk melakukan pendekatan pemecahan berulang dengan suatu kondisi tertentu pada suatu saat.
@@ -22,7 +22,7 @@ Pada dasarnya, ada dua elemen utama dalam rekursi:
 2. Langkah Rekursi (Recursive Step)
 	> Ini adalah bagian dari fungsi atau prosedur yang memanggil dirinya sendiri. Pemanggilan rekursif ini harus mengarah pada perubahan yang terjadi pada masalah sehingga menuju basis rekursi. Dengan kata lain, masalah harus semakin kecil setiap kali fungsi dipanggil kembali.
 
-## Entry Analogy <a id="entryAnalogy"></a>
+## Entry Analogy 
 Untuk memahami rekursi kita dapat menggunakan analogi nomor urut posisi.
 
 Suatu ketika kamu mengantri pada suatu antrian panjang, namun dirimu tidak mengetahui nomor urutan posisimu saat ini. Maka dari itu kamu bertanya kepada orang yang berada di depanmu.
@@ -52,7 +52,7 @@ flowchart LR
 ```
 <br>
 
-## Basic Syntax <a id="basicSyntax"></a>
+## Basic Syntax 
 ```pseudocode
 // Pseudocode
 function rekursi(parameter):
@@ -70,7 +70,7 @@ Note: banyak jenis sintaks dasar pada rekursi, namun secara umum pasti akan terd
 
 <br>
 
-## Is it worth? <a id="isWroth"></a>
+## Is it worth? 
 Itu tergantung pada situasi dan kondisi pasa masalah yang sedang kamu hadapi. Namun ketika sedang menggunakannya terdapat kelebihan dan kekurangannya.
 
 <center>
@@ -98,7 +98,7 @@ Itu tergantung pada situasi dan kondisi pasa masalah yang sedang kamu hadapi. Na
 </table>
 </center>
 
-## When To Use It? <a id="whenUse"></a>
+## When To Use It? 
 Ada beberapa kondisi atau kriteria untuk mengimplementasikan rekursi secara tepat, yaitu
 1. Masalah dapat dipecahkan menjadi masalah yang lebih kecil dengan struktur serupa
 	> Rekursi efektif digunakan ketika masalah yang sedang dihadapi dapat dibagi menjadi beberapa kasus yang serupa dengan masalah utama. Pemecahan masalah tersebut kemudian dapat diteruskan ke fungsi rekursif yang sama.
@@ -123,7 +123,7 @@ Ada beberapa kondisi atau kriteria untuk mengimplementasikan rekursi secara tepa
 	
 Perlu diingat bahwa harus hati-hati dalam penggunaan rekursi, karena rekursi dapat menjadi sulit untuk di-debug dan dapat menyebabkan masalah jika tidak dikelola dengan benar. Selalu pastikan bahwa basis rekursi tercapai dan rekursi berhenti pada suatu titik untuk mencegah masalah "stack overflow" dan kinerja yang buruk.
 
-# Call-Stack <a id="callStack"></a>
+# Call-Stack
 Call stack (tumpukan panggilan) adalah salah satu konsep penting dalam pemrograman komputer, terutama dalam pemrograman berbasis fungsi atau pemrograman prosedural. Call-Stack merupakan struktur data yang digunakan untuk melacak eksekusi fungsi atau metode dalam sebuah program. Call stack mengikuti urutan panggilan fungsi dan mengatur bagaimana fungsi-fungsi tersebut saling memanggil dan kembali.
 
 Call stack bekerja dengan cara berikut:
@@ -142,7 +142,7 @@ Call stack sangat penting untuk menghindari kesalahan eksekusi dan mengelola pem
 
 Selain itu, call stack juga digunakan dalam bahasa pemrograman yang mendukung rekursi, di mana sebuah fungsi memanggil dirinya sendiri. Call stack melacak semua panggilan rekursif sehingga program tahu kapan harus kembali dari panggilan rekursif dan melanjutkan eksekusi.
 
-## Magician Analogy <a id="magicAnalogy"></a>
+## Magician Analogy
 Untuk memahami call stack kita bisa membayangkan call stack sebagai cerita sederhana tentang seorang pesulap yang mengadakan pertunjukan sulap di panggung. Pesulap ini adalah fungsi utama dalam cerita kita, dan panggung adalah call stack.
 
 Ceritanya dimulai dengan pesulap berdiri sendirian di atas panggung (call stack kosong) dan dia memiliki seutas tali yang panjang. Setiap kali pesulap melakukan trik sulap, dia menambahkan tali ke dalam tumpukan tali di tangannya.
