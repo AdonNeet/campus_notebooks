@@ -1,12 +1,12 @@
 # Table of Content
 
-- [Introduction](#introduction-)
-	- [Entry Analogy](#entry-analogy-)
-	- [Basic Syntax](#basic-syntax-)
-	- [Is it worth?](#is-it-worth-)
-	- [When to use it?](#when-to-use-it-)
-- [Call Stack](#call-stack-)
-	- [Magician Analogy](#magician-analogy-)
+- [Introduction](#introduction)
+	- [Entry Analogy](#entry-analogy)
+	- [Basic Syntax](#basic-syntax)
+	- [Is it worth?](#is-it-worth)
+	- [When to use it?](#when-to-use-it)
+- [Call Stack](#call-stack)
+	- [Magician Analogy](#magician-analogy)
 
 
 
