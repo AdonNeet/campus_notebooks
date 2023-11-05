@@ -83,7 +83,7 @@ Bagaimana dengan sebuah string kosong?
 >	Sebuah string kosong biasanya dinyatakan dengan simbol epsilon
 >	Panjangnya = 0 
 
-$$\epsilon$$
+$$\displaystyle \epsilon~\rightarrow~\text{String Kosong}$$
 
 
 [>\_] Apa itu bahasa?
@@ -156,6 +156,23 @@ $$\displaystyle E \rightarrow T~|~T + E$$
 
 
 <b> &nbsp; > Bahasa Unrestricted</b>
+
+>	Bahasa unrestricted (Phase Structure/ Natural Language/ Type 0) berkaitan dengan Mesin Turing
+>>	Bahasa ini dikatakan Bahasa natural karena sudah termasuk bahasa yang dapat dimengerti oleh manusia
+>	Tata bahasa yang dapat diterima pada tata Bahasa Unrestricted, merupakan tata bahasa yang memenuhi aturan produksi
+
+- Aturan produksi pada ruas kiri $(\alpha)$ harus memiliki minimal sebuah simbol variable/non-terminal dan tidak boleh kosong.
+- Aturan produksi ruas kanan $(\beta)$ rangkaian symbol terminal dan non-terminal
+
+&nbsp;  <b>Contoh</b>
+
+| Tata bahasa unrestricted yang dapat diterima | Tata bahasa unrestricted yang tidak dapat diterima |
+| ----- | ----- |
+| Abc -> e | efg -> h |
+| bCDef -> DC | ab -> $\epsilon$ |
+| abEF -> Dc | |
+|
+  
 
 \[WORK IN PROGRESS\]
 
