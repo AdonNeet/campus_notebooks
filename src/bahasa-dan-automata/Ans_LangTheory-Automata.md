@@ -40,7 +40,7 @@ Note:
 ```mermaid
 %%{init: {'theme':'light', 'themeCSS': 'svg {background-color: black}'}}%%
 flowchart LR
-	x() --> 0((Q_0)) -- a --> 1((Q_1)) -- d --> 2((Q_2)) -- a --> 3(((Q_3)))
+	x( ) --> 0((Q_0)) -- a --> 1((Q_1)) -- d --> 2((Q_2)) -- a --> 3(((Q_3)))
 	2 -- d --> 5((Q_5))
 	2 -- u --> 4(((Q_4)))
 	4 ~~~ 5
@@ -73,19 +73,3 @@ Input String:
 </tr>
 </table>
 </center>
-
-```latex
-\documentclass{article}
-\usepackage{tikz}
-\usetikzlibrary{automata, positioning}
-
-\begin{document}
-\begin{tikzpicture}
-  \node[state, initial] (A) {State A};
-  \node[state, right=of A] (B) {State B};
-
-  \path[->] (A) edge [bend left] node {Transition 1} (B);
-  \path[->] (B) edge [bend left] node {Transition 2} (A);
-\end{tikzpicture}
-\end{document}
-```
