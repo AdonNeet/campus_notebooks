@@ -155,24 +155,108 @@ $$\displaystyle E \rightarrow T~|~T + E$$
 - Tipe 3 - Regular Grammar (Bahasa Reguler)
 
 
-<b> &nbsp; > Bahasa Unrestricted</b>
+<b style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 65%"> &nbsp; > Bahasa Unrestricted</b>
 
 >	Bahasa unrestricted (Phase Structure/ Natural Language/ Type 0) berkaitan dengan Mesin Turing
 >>	Bahasa ini dikatakan Bahasa natural karena sudah termasuk bahasa yang dapat dimengerti oleh manusia
->	Tata bahasa yang dapat diterima pada tata Bahasa Unrestricted, merupakan tata bahasa yang memenuhi aturan produksi
+>	Aturan produksinya sebagai berikut:
 
 - Aturan produksi pada ruas kiri $(\alpha)$ harus memiliki minimal sebuah simbol variable/non-terminal dan tidak boleh kosong.
 - Aturan produksi ruas kanan $(\beta)$ rangkaian symbol terminal dan non-terminal
 
 &nbsp;  <b>Contoh</b>
 
-| Tata bahasa unrestricted yang dapat diterima | Tata bahasa unrestricted yang tidak dapat diterima |
+| Tata bahasa *unrestricted* yang dapat diterima | Tata bahasa *unrestricted* yang tidak dapat diterima |
 | ----- | ----- |
 | Abc -> e | efg -> h |
 | bCDef -> DC | ab -> $\epsilon$ |
 | abEF -> Dc | |
-|
-  
+| gHj -> $\epsilon$ | |
+| | |
+
+// minimal ruas kiri memiliki non-terminal
+
+<b style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 65%"> &nbsp; > Bahasa Context Sensitive</b>
+>	Bahasa context sensitive (Type 1) merupakan tata bahasa yang berkaitan dengan mesin Linear Bounded Automata
+>	
+>	Aturan produksinya sebagai berikut:
+
+- Aturan produksi ruas kiri $(\alpha)$ minimal harus memiliki sebuah variable (non-terminal)
+- Jumlah string pada  ruas kiri harus <u>lebih kecil sama dengan</u> jumlah string pada ruas kanan. Secara matematika dapat dituliskan $|\alpha|\leq|\beta|$
+
+&nbsp;  <b>Contoh</b>
+
+| Tata bahasa *context sensitive* yang dapat diterima | Tata bahasa *context sensitive* yang tidak dapat diterima |
+| ----- | ----- |
+| A -> ec | s -> h |
+| Ab -> ef | Sab -> Cd |
+| AC -> FG | AACD -> ef |
+| sA -> cDF | CD -> $\epsilon$ |
+| EF -> AbGh | scG -> $\epsilon$ |
+| B -> $\epsilon$ | |
+| | |
+
+// minimal ruas kiri memiliki non terminal dan $|\alpha|\leq|\beta|$
+
+&nbsp;  <b><u>Catatan:</u></b>
+Pada tata bahasa *context sensitive* (syarat: $|\alpha|\leq|\beta|$)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $B\rightarrow\epsilon$ **(dapat diterima)**
+Aturan produksi di atas daianggap dapa tditerima oleh mesin automata, karena *context sensitive* hanya menghitung jumlah string ruas kiri dan kanan, dimana:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $|B|=1,|\epsilon|=1$
+Sehingga $B\rightarrow\epsilon$ dianggap memenuhi aturan produksi context sensitive.
+
+<b style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 65%"> &nbsp; > Bahasa Context Free</b>
+
+>	Bahasa bebas konteks (Type 2) merupakan tata bahasa yang berkaitan dengan mesin Push Down Automata (PDA)
+>	
+>	Aturan produksinya sebagai berikut:
+
+- Aturan produksi hampir sama dengan tipe 0 tapi ruas kiri $(\alpha)$ hanya memiliki sebuah simbol variable (non-terminal). // hanya satu digit, yaitu non-terminal saja
+- Aturan produksi ruas kanan $(\beta)$ tidak memiliki Batasan (terminal/non-terminal/epsilon)
+
+&nbsp;  <b>Contoh</b>
+
+| Tata bahasa *context free* yang dapat diterima | Tata bahasa *context free* yang tidak dapat diterima |
+| ----- | ----- |
+| A ->  c | a -> Cd |
+| B -> cD | Aa -> c |
+| S -> Ad | CD -> f |
+| C -> AAA | $\epsilon$ -> aB |
+| S -> $\epsilon$ | |
+| | |
+
+// ruas kiri hanya memiliki satu digit, yaitu non-terminal
+
+<b style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 65%"> &nbsp; > Bahasa Regular</b>
+
+>	Bahasa reguler (Type 3) merupakan tata bahasa yang berkaitan dengan mesin Finite State Automata (FSA).
+>	
+>	Aturan produksinya sebagai berikut:
+
+- Aturan produksi ruas kiri $(\alpha)$ harus memiliki sebuah simbol variable/non-terminal. // hanya 1 digit, yaitu non-terminal
+- Aturan pproduksi ruas kanan $(\beta)$ maksimal memiliki sebuah simbol variabel (apabila ada, harus terletak di posisi paling kanan). // hanya ada 1 non-terimnal, terletak di pojok kanan di sampin terminal
+
+
+&nbsp;  <b>Contoh</b>
+
+| Tata bahasa *regular* yang dapat diterima | Tata bahasa *regular* yang tidak dapat diterima |
+| ----- | ----- |
+| S -> a | s -> a |
+| S -> A | As -> c |
+| S ->  cD | C -> Bd |
+| S -> efG | C -> aBD |
+|  |  $\epsilon$ -> bdC |
+| | |
+
+// ruas kiri hanya memiliki satu digit, yaitu non-terminal
+// non-terminal pada ruas kanan terletak di pojok kanan
+
+&nbsp;  <b><u>Catatan:</u></b>
+Pada tata bahasa regular, ruas kiri haruslah sebuah variable 
+(1 digit non-terminal)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\epsilon$ -> bdC **(tidak dapat diterima)**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S -> $\epsilon$ **(diperbolehkan jika S tidak muncul di ruas kanan)**
+Aturan produksi di atas dianggap tidak dapat diterima oleh mesin automata, karena $\epsilon$ tidak dapat menuruknan aturan produksi apapun dan dianggap tidak memenuhi persyaratan aturan produksi tata bahasa regular.
 
 \[WORK IN PROGRESS\]
 
