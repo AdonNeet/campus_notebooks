@@ -23,11 +23,11 @@
 
 \> Simplex
 Satu arah
->	ex: Broadcasting televsi-radio
+>	Ex: Broadcasting televsi-radio
 
 \> Half Duplex
 Dua arah, tetapi hanya satu arah pada satu waktu (penggunaan kanal bergantian)
->	ex: Handy Talky (HT)
+>	Ex: Handy Talky (HT)
 
 \> Full Duplex
 Dua arah secara bersamaan
@@ -35,7 +35,7 @@ Dua arah secara bersamaan
 
 <h2 style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 100%"># OSI-TCP/IP Layer</h2>
 
-<h2 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] TCP/IP Layers</h2>
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] TCP/IP Layers</h3>
 
 Tidak ada model resmi tetapi yang utamanya berfungsi:
 - Application Layer
@@ -45,7 +45,8 @@ Tidak ada model resmi tetapi yang utamanya berfungsi:
 - Physical layer
 
 <b> &nbsp; > Physical Layer</b>
-> Berkaitan dengan antarmuka (interface) fisik antara komputer dan jaringan.
+>	Berkaitan dengan antarmuka (interface) fisik antara komputer dan jaringan.
+
 Berkaitan dengan masalah seperti:
 - Karakteristik media transmisi
 - Level sinyal
@@ -78,7 +79,7 @@ Menyediakan pengiriman data yang handal dalam urutan yang sama seperti yang diki
 
 Membutuhkan modal terpisah untuk setiap jenis aplikasi
 
-<h2 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI Layers</h2>
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI Layers</h3>
 
 >	Open System Interconnection
 >	-> Merupakan sistem teoritis disampaikan
@@ -100,30 +101,32 @@ Memberikan akses ke lingkungan OSI untuk pengguna dan juga menyediakan layanan i
 Memberikan kemandirian(?) pada proses aplikasi dari perbedaan representasi data (sintaks)
 
 <b> &nbsp; > Session Layer</b>
-- Menyediakan struktur kontrol untuk komunikasi antar aplikasi
-- Menetapkan, mengelolam dan mengkahiri koneksi (sesi) antara aplikasi yang bekerja sama
+>	-> Menyediakan struktur kontrol untuk komunikasi antar aplikasi
+>	-> Menetapkan, mengelola dan mengkahiri koneksi (sesi) antara aplikasi yang bekerja sama
 
 <b> &nbsp; > Transport Layer</b>
-- Menyediakan transfer data yang andal dan transparan antar titik akhir
-- Menyediakan pemulihan kesalahan ujung ke ujung dan kontrol aliran
+>	-> Menyediakan transfer data yang andal dan transparan antar titik akhir
+>	-> Menyediakan pemulihan kesalahan ujung ke ujung dan kontrol aliran
 
 <b> &nbsp; > Network Layer</b>
-- Memberikan lapisan atas kemandirian(?) dari transmisi data dan teknologi switching yang digunakan untuk menghubungkan sistem
-- Bertanggung jawab untuk membangun, memelihara, dan mengakhiri koneksi
+>	-> Memberikan lapisan atas kemandirian(?) dari transmisi data dan teknologi switching yang digunakan untuk menghubungkan sistem
+>	-> Bertanggung jawab untuk membangun, memelihara, dan mengakhiri koneksi
 
 <b> &nbsp; > Data Link Layer</b>
-- Menyediakan transfer informasi yang andal melalui tautan fisik
-- Mengirimkan blok (bingkai) dengan sinkronisasi yang diperlukan, kontrol kesalahan, dan kontrol aliran
+>	-> Menyediakan transfer informasi yang andal melalui tautan fisik
+>	-> Mengirimkan blok (bingkai) dengan sinkronisasi yang diperlukan, kontrol kesalahan, dan kontrol aliran
 
 <b> &nbsp; > Physical Layer</b>
-- Berkaitan dengan transmisi aliran bit tidak tersturktur melalui media fisik
-- Berkaitan dengan karakteristik mekanik, listirk, fungsional, dan prosedural untuk mengakses media fisik
+>	-> Berkaitan dengan transmisi aliran bit tidak tersturktur melalui media fisik
+>	-> Berkaitan dengan karakteristik mekanik, listirk, fungsional, dan prosedural untuk mengakses media fisik
+<!--
+
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Model Komunikasi</h3>
 
 
 
-
-
-<h2 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Teknik Pengkodean Sinyal</h2>
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Teknik Pengkodean Sinyal</h3>
 
 
 <b> &nbsp; > Manchester Diferensial</b>
+--> 
