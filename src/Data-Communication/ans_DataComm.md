@@ -119,6 +119,55 @@ Memberikan kemandirian(?) pada proses aplikasi dari perbedaan representasi data 
 <b> &nbsp; > Physical Layer</b>
 >	-> Berkaitan dengan transmisi aliran bit tidak tersturktur melalui media fisik
 >	-> Berkaitan dengan karakteristik mekanik, listirk, fungsional, dan prosedural untuk mengakses media fisik
+
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI vs TCP/IP Layers</h3>
+
+<br></br>
+
+<center>
+<table style="border: 1px solid lightgray;">
+	<tr>
+		<th width="250px" align="center">OSI</th>
+		<th width="250px" align="center">TCP/IP</th>
+	</tr>
+    <tr>
+	    <td align="center">Application</td>
+        <td align="center" rowspan="3">Application</td>
+    </tr>
+    <tr>
+        <td align="center">Presentation</td>
+    </tr>
+    <tr>
+	    <td align="center"> &nbsp; </td>
+    </tr>
+    <tr>
+	    <td align="center">Session</td>
+	    <td align="center" rowspan="2">Transport (Host-to-host)</td>
+    </tr>
+    <tr>
+	    <td align="center">Transport</td>
+    </tr>
+    <tr>
+	    <td align="center" rowspan="2">Network</td>
+	    <td align="center">Internet</td>
+    </tr>
+    <tr>
+	    <td align="center"> &nbsp; </td>
+    </tr>
+    <tr>
+	    <td align="center"> &nbsp; </td>
+		<td align="center" rowspan="2">Network Access</td>
+    </tr>
+    <tr>
+	    <td align="center">Data Link</td>
+    </tr>
+    <tr>
+	    <td align="center">Physical</td>
+	    <td align="center">Physical</td>
+    </tr>
+</table>
+</center>
+
 <!--
 
 <h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Model Komunikasi</h3>
