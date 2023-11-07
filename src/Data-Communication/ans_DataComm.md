@@ -13,11 +13,13 @@
 <h2 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Konfigurasi yang mungkin</h2>
 
 \> Direct link
-- Tidak ada perangkat perantara
+>	Tidak ada perangkat perantara
+
 \> Point-to-Point
-- Hanya 2 perangkat yang berbagi link
+>	Hanya 2 perangkat yang berbagi link
+
 \> Multi-Point
-- Lebih dari dua perangkat yang berbagi link
+>	Lebih dari dua perangkat yang berbagi link
 
 <h2 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Arah komunikasi/transmisi</h2>
 
@@ -44,14 +46,21 @@ Tidak ada model resmi tetapi yang utamanya berfungsi:
 - Network access layer
 - Physical layer
 
-<b> &nbsp; > Physical Layer</b>
->	Berkaitan dengan antarmuka (interface) fisik antara komputer dan jaringan.
+<b> &nbsp; > Application Layer</b>
+>	Memberikan dukungan untuk aplikasi pengguna
 
-Berkaitan dengan masalah seperti:
-- Karakteristik media transmisi
-- Level sinyal
-- Kecepatan data
-- Hal-hal terkait lainnya
+Membutuhkan modal terpisah untuk setiap jenis aplikasi
+
+<b> &nbsp; > Transport Layer (TCP)</b>
+>	Lapisan umum yang digunakan bersama oleh semua aplikasi
+
+Menyediakan pengiriman data yang handal dalam urutan yang sama seperti yang dikirim. Biasanya menggunakan TCP.
+
+<b> &nbsp; > Internet Layer (IP)</b>
+>	Fungsi perutean di beberapa jaringan 
+
+Untuk sistem yang terhubung ke jaringan yang berbeda menggunakan protokol IP, diimplementasikan di sistem akhir dan router
+>	Router menghubungkan dua jaringan dan menyampaikan data di antara mereka
 
 <b> &nbsp; > Network Access Layer</b>
 >	Pertukaran data antara sistem akhir dan jaringan terpasang.
@@ -63,21 +72,15 @@ Berkaitan dengan masalah seperti:
 
 Ini memungkinkan lapisan di atas mengabaikan link spesifik.
 
-<b> &nbsp; > Internet Layer (IP)</b>
->	Fungsi perutean di beberapa jaringan 
+<b> &nbsp; > Physical Layer</b>
+>	Berkaitan dengan antarmuka (interface) fisik antara komputer dan jaringan.
 
-Untuk sistem yang terhubung ke jaringan yang berbeda menggunakan protokol IP, diimplementasikan di sistem akhir dan router
->	Router menghubungkan dua jaringan dan menyampaikan data di antara mereka
+Berkaitan dengan masalah seperti:
+- Karakteristik media transmisi
+- Level sinyal
+- Kecepatan data
+- Hal-hal terkait lainnya
 
-<b> &nbsp; > Transport Layer (TCP)</b>
->	Lapisan umum yang digunakan bersama oleh semua aplikasi
-
-Menyediakan pengiriman data yang handal dalam urutan yang sama seperti yang dikirim. Biasanya menggunakan TCP.
-
-<b> &nbsp; > Application Layer</b>
->	Memberikan dukungan untuk aplikasi pengguna
-
-Membutuhkan modal terpisah untuk setiap jenis aplikasi
 
 <h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI Layers</h3>
 
@@ -98,18 +101,18 @@ Memiliki 7 lapisan:
 Memberikan akses ke lingkungan OSI untuk pengguna dan juga menyediakan layanan informasi terdistribusi
 
 <b> &nbsp; > Presentation Layer</b>
-Memberikan kemandirian(?) pada proses aplikasi dari perbedaan representasi data (sintaks)
+Memberikan independence pada proses aplikasi dari sintaks yang berbeda
 
 <b> &nbsp; > Session Layer</b>
 >	-> Menyediakan struktur kontrol untuk komunikasi antar aplikasi
 >	-> Menetapkan, mengelola dan mengkahiri koneksi (sesi) antara aplikasi yang bekerja sama
 
 <b> &nbsp; > Transport Layer</b>
->	-> Menyediakan transfer data yang andal dan transparan antar titik akhir
+>	-> Menyediakan transfer data yang handal dan transparan antar titik akhir
 >	-> Menyediakan pemulihan kesalahan ujung ke ujung dan kontrol aliran
 
 <b> &nbsp; > Network Layer</b>
->	-> Memberikan lapisan atas kemandirian(?) dari transmisi data dan teknologi switching yang digunakan untuk menghubungkan sistem
+>	-> Menyediakan lapisan atas independence dari transmisi data dan teknologi switching yang digunakan untuk menghubungkan sistem
 >	-> Bertanggung jawab untuk membangun, memelihara, dan mengakhiri koneksi
 
 <b> &nbsp; > Data Link Layer</b>
@@ -121,9 +124,6 @@ Memberikan kemandirian(?) pada proses aplikasi dari perbedaan representasi data 
 >	-> Berkaitan dengan karakteristik mekanik, listirk, fungsional, dan prosedural untuk mengakses media fisik
 
 <h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI vs TCP/IP Layers</h3>
-
-<br></br>
-
 <center>
 <table style="border: 1px solid lightgray;">
 	<tr>
@@ -168,9 +168,35 @@ Memberikan kemandirian(?) pada proses aplikasi dari perbedaan representasi data 
 </table>
 </center>
 
+<h2 style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 100%"># Model Komunikasi</h2>
+
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Grafik Model Komunikasi</h3>
+
+```mermaid
+%%{init: {'theme':'light', 'themeCSS': 'svg {background-color: black}'}}%%
+flowchart LR
+	a[Souce] ==> b[Transmitter] ==> c[Transmission\nSystem] ==> d[Receiver] ==> e[Destination]
+```
+
+<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Tugas Komunikasi</h3>
+<center> 
+
+| | | | |
+| :--: | :--: | :--: | :--: |
+| | Transmisiion system<br>Utilization | Addressing | |
+| | Interfacing | Routing | |
+| | Signal generation | Recovery | |
+| | Synchronization | Message Formatting | |
+| | Exchange Management | Security | |
+| | Error detection and Correction | Network Management | |
+| | Flow Control | | |
+| | | |
+
+</center>
+
+
 <!--
 
-<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Model Komunikasi</h3>
 
 
 
