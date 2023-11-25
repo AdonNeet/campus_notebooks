@@ -50,7 +50,7 @@ flowchart LR
 	X((Start)) --- A -- ask --> B -- ask --> C -- ask --> D -- ask --> E
 	E -- 1 --> D -- 1+1 --> C -- 2+1 --> B -- 3+1 --> A -- 4+1 --> Y((Output))
 ```
-<br>
+
 
 ## Basic Syntax 
 ```pseudocode
@@ -68,7 +68,6 @@ ans = rekursi(nilai_parameter)
 ```
 Note: banyak jenis sintaks dasar pada rekursi, namun secara umum pasti akan terdapat bagian sebagai basis rekursi dan langkah rekursi untuk memanggil dirinya sendiri. 
 
-<br>
 
 ## Is it worth? 
 Itu tergantung pada situasi dan kondisi pasa masalah yang sedang kamu hadapi. Namun ketika sedang menggunakannya terdapat kelebihan dan kekurangannya.
@@ -107,7 +106,7 @@ Ada beberapa kondisi atau kriteria untuk mengimplementasikan rekursi secara tepa
 	> Terkadang, solusi rekursif lebih mudah dimengerti daripada solusi iteratif atau non-rekursif. Terutama dalam masalah matematis atau algoritma dengan karakteristik yang mengikuti pola rekursif, rekursi dapat memperjelas logika pemecahan masalah.
     
 3. Kasus dasar atau basis rekursi jelas
-	> Anda harus memiliki pemahaman yang jelas tentang kapan rekursi harus berhenti. Basis rekursi adalah kondisi yang memicu penghentian rekursi. Tanpa basis rekursi yang benar, rekursi akan terus berlanjut dan menyebabkan stack overflow atau masalah serupa.
+	> Harus memiliki pemahaman yang jelas tentang kapan rekursi harus berhenti. Basis rekursi adalah kondisi yang memicu penghentian rekursi. Tanpa basis rekursi yang benar, rekursi akan terus berlanjut dan menyebabkan stack overflow atau masalah serupa.
     
 4. Rekursi lebih efisien daripada alternatifnya
 	> Ada situasi di mana rekursi dapat menghasilkan solusi yang lebih efisien daripada pendekatan non-rekursif. Contoh terkenal adalah algoritma pembagi dan penaklukan (divide and conquer) seperti pengurutan cepat (quick sort) atau pembagian nilai (merge sort).
@@ -162,7 +161,7 @@ flowchart LR
    - Setelah itu, dia mengeluarkan ujung tali dari tumpukan lagi.
 ```mermaid
 flowchart LR
-	X((Start)) --- Magician -- put 1 --> Stack -- pick 1 --> Magician -- put 2 --> Stack -- pick 2 --> Magician  -- show empty stack --> Y((Output))
+	X((Start)) --- Magician -- put 1 --> Stack -- pick 2 --> Magician -- put 2 --> Stack -- pick 1 --> Magician  -- show empty stack --> Y((Output))
 ```
 
 3. Trik Ketiga:
@@ -172,7 +171,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-	X((Start)) --- Magician -- put 1 --> Stack -- pick 1 --> Magician -- put 2 --> Stack -- pick 2 --> Magician -- put 4 --> Stack -- pick 4 --> Magician -- show empty stack --> Y((Output))
+	X((Start)) --- Magician -- put 1 --> Stack -- pick 4 --> Magician -- put 2 --> Stack -- pick 2 --> Magician -- put 4 --> Stack -- pick 1 --> Magician -- show empty stack --> Y((Output))
 ```
 
 Selama pertunjukan, penyihir terus menambahkan tali ke dalam tumpukan (call stack) setiap kali dia memulai trik sulap, dan dia mengeluarkan tali dari tumpukan ketika trik selesai. Setiap kali tumpukan tali terlalu panjang, penyihir harus mengeluarkan tali-tali tersebut sebelum bisa melanjutkan pertunjukan.

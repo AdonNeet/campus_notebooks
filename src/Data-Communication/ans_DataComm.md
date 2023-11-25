@@ -123,7 +123,7 @@ Memberikan independence pada proses aplikasi dari sintaks yang berbeda
 >	-> Berkaitan dengan transmisi aliran bit tidak tersturktur melalui media fisik
 >	-> Berkaitan dengan karakteristik mekanik, listirk, fungsional, dan prosedural untuk mengakses media fisik
 
-<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI vs TCP/IP Layers</h3>
+<h3 style="margin-bottom: 20px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] OSI vs TCP/IP Layers</h3>
 <center>
 <table style="border: 1px solid lightgray;">
 	<tr>
@@ -168,9 +168,9 @@ Memberikan independence pada proses aplikasi dari sintaks yang berbeda
 </table>
 </center>
 
-<h2 style="margin-bottom: 5px; border-bottom: 2px solid grey; display: inline-block; width: 100%"># Model Komunikasi</h2>
+<h2 style="margin-bottom: 1px; border-bottom: 2px solid grey; display: inline-block; width: 100%"># Model Komunikasi</h2>
 
-<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Grafik Model Komunikasi</h3>
+<h3 style="margin-bottom: 20px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Grafik Model Komunikasi</h3>
 
 ```mermaid
 %%{init: {'theme':'light', 'themeCSS': 'svg {background-color: black}'}}%%
@@ -178,7 +178,7 @@ flowchart LR
 	a[Souce] ==> b[Transmitter] ==> c[Transmission\nSystem] ==> d[Receiver] ==> e[Destination]
 ```
 
-<h3 style="margin-bottom: 1px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Tugas Komunikasi</h3>
+<h3 style="margin-bottom: 20px; border-bottom: 2px dashed grey; display: inline-block; width: 75%">[>_] Tugas Komunikasi</h3>
 <center> 
 
 | | | | |
